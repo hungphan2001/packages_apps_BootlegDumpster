@@ -755,5 +755,6 @@
     <!--3-Finger screenshot-->
     <string name="three_finger_gesture">Three finger gesture</string>
     <string name="three_finger_gesture_summary">Swipe three finger to screenshot</string>
-
+<!-- Advanced Controls -->
+	<string name="advanced_controls_title">Advanced Controls</string>
 </resources>
