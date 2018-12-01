@@ -33,7 +33,9 @@ public class MiscSettings extends SettingsPreferenceFragment implements
     private static final String DEVICE_CATEGORY = "device_extras_category";
     private static final String DEVICE_OMNI_CATEGORY = "device_extras_omni_category";
     private static final String DEVICE_OMNI_PACKAGE = "org.omnirom.device";
-
+private static final String KEY_DEVICE_PART = "advanced_controls";
+    private static final String KEY_DEVICE_PART_PACKAGE_NAME = "com.thht.settings.device";
+    
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -48,7 +50,10 @@ public class MiscSettings extends SettingsPreferenceFragment implements
         if (!Utils.isPackageInstalled(getActivity(), DEVICE_OMNI_PACKAGE)) {
             getPreferenceScreen().removePreference(findPreference(DEVICE_OMNI_CATEGORY));
         }
-
+// Advanced Controls
+        if (!com.bootleggers.dumpster.preferences.Utils.isPackageInstalled(getActivity(), KEY_DEVICE_PART_PACKAGE_NAME)) {
+            getPreferenceScreen().removePreference(findPreference(KEY_DEVICE_PART));
+        }
     }
 
     @Override
